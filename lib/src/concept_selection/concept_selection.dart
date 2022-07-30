@@ -14,18 +14,377 @@ class ConceptSelection extends StatefulWidget {
 class ConceptSelectionState extends State<ConceptSelection> {
   @override
   Widget build(BuildContext context) {
+    double widthOfScreen = MediaQuery.of(context).size.width;
+    int crossAxis = 2;
+    if (widthOfScreen < 400.0) {
+      crossAxis = 2;
+    } else {
+      crossAxis = 3;
+    }
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        children: <Widget>[
-          appbarWidget(MediaQuery.of(context).size, context, "Quiz"),
-          const SizedBox(
-            height: 20,
+        // backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: const Text("Quiz"),
+          centerTitle: true,
+          backgroundColor: Colors.indigo[900],
+        ),
+        body: Padding(
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
+          child: GridView.count(
+            childAspectRatio: 1.0,
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            crossAxisCount: crossAxis,
+            crossAxisSpacing: 18,
+            mainAxisSpacing: 18,
+            children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GroupSelection()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/mathematics.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Mathematics",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const ___),
+                  // );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/physics.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Physics",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const ___),
+                  // );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/chemistry.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Chemistry",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const ___),
+                  // );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/IT.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "IT",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const ___),
+                  // );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/biology.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Biology",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  //print("Container clicked");
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/engineering.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Engineering",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  //print("Container clicked");
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/psychology.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Psychology",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  //print("Container clicked");
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/Pictures/astronomy.png",
+                        width: 42,
+                      ),
+                      const SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        "Astronomy",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      Text(
+                        "6 Items",
+                        style: GoogleFonts.openSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                  padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).size.height * 0.1))
+            ],
           ),
-          const Admin(),
-        ],
-      ),
-    );
+        ));
   }
 }
 
