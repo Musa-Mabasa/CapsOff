@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stem_wiz/src/concept_selection/concept_selection.dart';
+import 'package:stem_wiz/src/tips_and_tricks/tips_and_tricks.dart';
 
 void main() => runApp(const MaterialApp(home: Admin()));
 
@@ -208,10 +209,10 @@ class Admin extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const ___),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TipsAndTricks()),
+              );
             },
             child: Container(
               decoration: BoxDecoration(
