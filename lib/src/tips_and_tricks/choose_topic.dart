@@ -4,14 +4,14 @@ import 'package:stem_wiz/src/tips_and_tricks/mathematicsVideo.dart';
 
 void main() => runApp(const MaterialApp(home: Admin()));
 
-class GroupSelection extends StatefulWidget {
-  const GroupSelection({Key? key}) : super(key: key);
+class TopicSelection extends StatefulWidget {
+  const TopicSelection({Key? key}) : super(key: key);
 
   @override
-  GroupSelectionState createState() => GroupSelectionState();
+  TopicSelectionState createState() => TopicSelectionState();
 }
 
-class GroupSelectionState extends State<GroupSelection> {
+class TopicSelectionState extends State<TopicSelection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +81,7 @@ class Admin extends StatelessWidget {
                             fontWeight: FontWeight.w600)),
                   ),
                   Text(
-                    "20 Questions",
+                    "1 video",
                     style: GoogleFonts.openSans(
                         textStyle: const TextStyle(
                             color: Colors.white70,
@@ -122,7 +122,7 @@ class Admin extends StatelessWidget {
                             fontWeight: FontWeight.w600)),
                   ),
                   Text(
-                    "20 Questions",
+                    "1 video",
                     style: GoogleFonts.openSans(
                         textStyle: const TextStyle(
                             color: Colors.white70,
@@ -166,7 +166,7 @@ class Admin extends StatelessWidget {
                             fontWeight: FontWeight.w600)),
                   ),
                   Text(
-                    "20 Questions",
+                    "1 video",
                     style: GoogleFonts.openSans(
                         textStyle: const TextStyle(
                             color: Colors.white70,
@@ -210,7 +210,7 @@ class Admin extends StatelessWidget {
                             fontWeight: FontWeight.w600)),
                   ),
                   Text(
-                    "20 Questions",
+                    "1 video",
                     style: GoogleFonts.openSans(
                         textStyle: const TextStyle(
                             color: Colors.white70,
@@ -254,7 +254,7 @@ class Admin extends StatelessWidget {
                             fontWeight: FontWeight.w600)),
                   ),
                   Text(
-                    "20 Questions",
+                    "1 video",
                     style: GoogleFonts.openSans(
                         textStyle: const TextStyle(
                             color: Colors.white70,
@@ -295,7 +295,7 @@ class Admin extends StatelessWidget {
                             fontWeight: FontWeight.w600)),
                   ),
                   Text(
-                    "20 Questions",
+                    "1 video",
                     style: GoogleFonts.openSans(
                         textStyle: const TextStyle(
                             color: Colors.white70,

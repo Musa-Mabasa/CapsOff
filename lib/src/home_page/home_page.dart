@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stem_wiz/src/competitions/competitions.dart';
 import 'package:stem_wiz/src/concept_selection/concept_selection.dart';
 import 'package:stem_wiz/src/tips_and_tricks/tips_and_tricks.dart';
 
@@ -49,7 +50,7 @@ class HomePageState extends State<HomePage> {
                             const AssetImage('assets/Pictures/bear.jpg'),
                       ),
                       Text(
-                        "Name Surname",
+                        "Musa Mabasa",
                         style: GoogleFonts.openSans(
                             textStyle: const TextStyle(
                                 color: Colors.white,
@@ -245,10 +246,10 @@ class Admin extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const ___),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Competitions()),
+              );
             },
             child: Container(
               decoration: BoxDecoration(
